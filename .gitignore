@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .env
 .next
+next-env.d.ts
+*storybook.log
