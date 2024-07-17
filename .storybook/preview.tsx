@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import type { Preview } from "@storybook/react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { lightTheme, darkTheme } from "../src/themes";
+import { overrides } from "../src/themes/overrides";
 
 const THEMES = {
   light: lightTheme,
@@ -13,7 +14,7 @@ export const withMuiTheme = (Story, context) => {
   const theme = useMemo(() => THEMES[themeKey] || THEMES["light"], [themeKey]);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={{ ...theme, ...overrides }}>
       <CssBaseline />
       <Story />
     </ThemeProvider>
@@ -24,6 +25,7 @@ const preview: Preview = {
   parameters: {
     controls: {
       expanded: true,
+      sort: "requiredFirst",
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,

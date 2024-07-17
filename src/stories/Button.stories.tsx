@@ -21,8 +21,6 @@ type Story = StoryObj<typeof CustomButton>;
 export const Demo: Story = {
   args: {
     label: "Hello",
-    variant: "contained",
-    color: "primary",
   },
 };
 
@@ -39,12 +37,12 @@ export const Variants: Story = {
 export const Colors: Story = {
   render: () => (
     <>
-      <CustomButton label="Primary" variant="contained" color="primary" />
-      <CustomButton label="Secondary" variant="contained" color="secondary" />
-      <CustomButton label="Success" variant="contained" color="success" />
-      <CustomButton label="Info" variant="contained" color="info" />
-      <CustomButton label="Warning" variant="contained" color="warning" />
-      <CustomButton label="Error" variant="contained" color="error" />
+      <CustomButton label="Primary" color="primary" />
+      <CustomButton label="Secondary" color="secondary" />
+      <CustomButton label="Success" color="success" />
+      <CustomButton label="Info" color="info" />
+      <CustomButton label="Warning" color="warning" />
+      <CustomButton label="Error" color="error" />
     </>
   ),
 };
@@ -52,9 +50,9 @@ export const Colors: Story = {
 export const Sizes: Story = {
   render: () => (
     <>
-      <CustomButton label="Small" variant="contained" size="small" />
-      <CustomButton label="Medium" variant="contained" size="medium" />
-      <CustomButton label="Large" variant="contained" size="large" />
+      <CustomButton label="Small" size="small" />
+      <CustomButton label="Medium" size="medium" />
+      <CustomButton label="Large" size="large" />
     </>
   ),
 };
