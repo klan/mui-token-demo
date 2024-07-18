@@ -1,16 +1,9 @@
 import React from "react";
-import { Button, ButtonProps } from "@mui/material";
+import Button, { type ButtonProps } from "@mui/joy/Button";
 
 type ButtonBaseProps = Pick<
   ButtonProps,
-  | "variant"
-  | "size"
-  | "color"
-  | "disabled"
-  | "disableRipple"
-  | "disableElevation"
-  | "centerRipple"
-  | "fullWidth"
+  "variant" | "size" | "color" | "disabled" | "fullWidth"
 >;
 
 export interface CustomButtonProps extends ButtonBaseProps {

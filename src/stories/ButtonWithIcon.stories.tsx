@@ -21,8 +21,6 @@ type Story = StoryObj<typeof CustomButtonWithIcon>;
 export const Demo: Story = {
   args: {
     label: "Primary Button",
-    variant: "contained",
-    color: "primary",
     icon: "add",
   },
 };

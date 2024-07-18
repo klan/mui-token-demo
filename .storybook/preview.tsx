@@ -1,23 +1,23 @@
-import React, { useMemo } from "react";
+import React from "react";
 import type { Preview } from "@storybook/react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import { lightTheme, darkTheme } from "../src/themes";
-import { overrides } from "../src/themes/overrides";
+import { CssVarsProvider } from "@mui/joy/styles";
+import CssBaseline from "@mui/joy/CssBaseline";
+import { theme } from "../src/themes";
 
-const THEMES = {
-  light: lightTheme,
-  dark: darkTheme,
-};
-
-export const withMuiTheme = (Story, context) => {
+export const withJoyTheme = (Story, context) => {
   const { theme: themeKey } = context.globals;
-  const theme = useMemo(() => THEMES[themeKey] || THEMES["light"], [themeKey]);
 
   return (
-    <ThemeProvider theme={{ ...theme, ...overrides }}>
+    <CssVarsProvider
+      defaultMode={themeKey}
+      theme={theme}
+      colorSchemeSelector="#storybook_color-scheme"
+    >
       <CssBaseline />
-      <Story />
-    </ThemeProvider>
+      <div id="storybook_color-scheme">
+        <Story />
+      </div>
+    </CssVarsProvider>
   );
 };
 
@@ -32,19 +32,19 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [withMuiTheme],
+  decorators: [withJoyTheme],
   globalTypes: {
     theme: {
       name: "Theme",
       title: "Theme",
       description: "Theme for your components",
-      defaultValue: "dark",
+      defaultValue: "system",
       toolbar: {
-        icon: "paintbrush",
         dynamicTitle: true,
         items: [
-          { value: "dark", left: "🌙", title: "Dark mode" },
-          { value: "light", left: "☀️", title: "Light mode" },
+          { value: "system", right: "🌓", title: "System color scheme" },
+          { value: "light", right: "☀️", title: "Light mode" },
+          { value: "dark", right: "🌙", title: "Dark mode" },
         ],
       },
     },

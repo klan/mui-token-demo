@@ -1,17 +1,10 @@
 import React from "react";
-import { Button, ButtonProps } from "@mui/material";
+import Button, { type ButtonProps } from "@mui/joy/Button"; // TODO use IconButton?
 import { getIconByName, IconNames } from "../utils/IconMapper";
 
 type ButtonBaseProps = Pick<
   ButtonProps,
-  | "variant"
-  | "size"
-  | "color"
-  | "disabled"
-  | "disableRipple"
-  | "disableElevation"
-  | "centerRipple"
-  | "fullWidth"
+  "variant" | "size" | "color" | "disabled" | "fullWidth"
 >;
 
 export interface CustomButtonProps extends ButtonBaseProps {
@@ -32,7 +25,7 @@ export const CustomButtonWithIcon = ({
   const IconComponent = icon ? getIconByName(icon) : null;
 
   return (
-    <Button {...rest} startIcon={IconComponent ? <IconComponent /> : null}>
+    <Button {...rest} startDecorator={IconComponent ? <IconComponent /> : null}>
       {label}
     </Button>
   );

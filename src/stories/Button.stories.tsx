@@ -27,9 +27,10 @@ export const Demo: Story = {
 export const Variants: Story = {
   render: () => (
     <>
-      <CustomButton label="Contained" variant="contained" />
+      <CustomButton label="Solid" variant="solid" />
+      <CustomButton label="Soft" variant="soft" />
       <CustomButton label="Outlined" variant="outlined" />
-      <CustomButton label="Text" variant="text" />
+      <CustomButton label="Plain" variant="plain" />
     </>
   ),
 };
@@ -38,11 +39,10 @@ export const Colors: Story = {
   render: () => (
     <>
       <CustomButton label="Primary" color="primary" />
-      <CustomButton label="Secondary" color="secondary" />
+      <CustomButton label="Neutral" color="neutral" />
       <CustomButton label="Success" color="success" />
-      <CustomButton label="Info" color="info" />
       <CustomButton label="Warning" color="warning" />
-      <CustomButton label="Error" color="error" />
+      <CustomButton label="Danger" color="danger" />
     </>
   ),
 };
@@ -50,9 +50,9 @@ export const Colors: Story = {
 export const Sizes: Story = {
   render: () => (
     <>
-      <CustomButton label="Small" size="small" />
-      <CustomButton label="Medium" size="medium" />
-      <CustomButton label="Large" size="large" />
+      <CustomButton label="Small" size="sm" />
+      <CustomButton label="Medium" size="md" />
+      <CustomButton label="Large" size="lg" />
     </>
   ),
 };

@@ -1,23 +1,21 @@
 "use client";
 
-import { useMemo } from "react";
-import { ThemeProvider, CssBaseline, useMediaQuery } from "@mui/material";
 import { CustomButton } from "@/components/Button";
-import { lightTheme, darkTheme } from "@/themes";
-import { overrides } from "@/themes/overrides";
+import Typography from "@mui/joy/Typography";
+import { CssVarsProvider } from "@mui/joy/styles";
+import CssBaseline from "@mui/joy/CssBaseline";
+import { theme } from "@/themes";
 
 export default function App() {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-
-  const theme = useMemo(
-    () => (prefersDarkMode ? darkTheme : lightTheme),
-    [prefersDarkMode]
-  );
-
   return (
-    <ThemeProvider theme={{ ...theme, ...overrides }}>
+    <CssVarsProvider
+      defaultMode="system"
+      theme={theme}
+      modeStorageKey="example_color-scheme"
+    >
       <CssBaseline />
       <CustomButton label="Hello world!" />
-    </ThemeProvider>
+      <Typography fontSize="sm">Hello World</Typography>
+    </CssVarsProvider>
   );
 }
