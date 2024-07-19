@@ -1,3 +1,5 @@
+@import '../tokens/colors.css'; // use relative path for now
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
