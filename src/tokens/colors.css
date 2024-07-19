@@ -80,107 +80,107 @@
   --colorTransparentColorsLight80: #ffffffcc;
   --colorTransparentColorsLight90: #ffffffe5;
   /* Black, white, heading, title, display, emphasis, strong */
-  --colorTextTextDefault: var(--colorOtherColorsGreyscaleBlack);
+  --colorTextDefault: var(--colorOtherColorsGreyscaleBlack);
   /* Black, white, heading, title, display, emphasis, strong, grey, gray, greytones, label, caption, eyebrow, body, paragraph */
-  --colorTextTextInverse: var(--colorOtherColorsGreyscaleWhite);
+  --colorTextInverse: var(--colorOtherColorsGreyscaleWhite);
   /* grey, gray, greytones, black, white, body, paragraph, label, caption, eyebrow */
-  --colorTextTextSubtle1: var(--colorOtherColorsGreyscale800);
+  --colorTextSubtle2: var(--colorOtherColorsGreyscale800);
   /* grey, gray, greytones, label, caption, eyebrow */
-  --colorTextTextSubtle2: var(--colorOtherColorsGreyscale600);
+  --colorTextSubtle1: var(--colorOtherColorsGreyscale600);
   /* brand, color, heading, title, display, label, caption, eyebrow, body, paragraph */
-  --colorTextTextBrandBlue1: var(--colorBrandColorsBlue500);
+  --colorTextBrandBlue2: var(--colorBrandColorsBlue500);
   /* brand, color, heading, title, display, label, caption, eyebrow, body, paragraph */
-  --colorTextTextBrandBlue2: var(--colorBrandColorsBlue100);
+  --colorTextBrandBlue1: var(--colorBrandColorsBlue100);
   /* brand, color, heading, title, display, label, caption, eyebrow, body, paragraph */
-  --colorTextTextBrandYellow1: var(--colorBrandColorsYellow500);
+  --colorTextBrandYellow1: var(--colorBrandColorsYellow500);
   /* brand, color, heading, title, display, label, caption, eyebrow, body, paragraph */
-  --colorTextTextBrandYellow2: var(--colorBrandColorsYellow100);
+  --colorTextBrandYellow2: var(--colorBrandColorsYellow100);
   /* Background, black, white, grey, greytones, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceDefault: var(--colorOtherColorsGreyscaleWhite);
+  --colorSurfaceDefault: var(--colorOtherColorsGreyscaleWhite);
   /* Background, black, white, grey, greytones, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceInverse: var(--colorOtherColorsGreyscaleBlack);
+  --colorSurfaceInverse: var(--colorOtherColorsGreyscaleBlack);
   /* Background, black, white, grey, greytones, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceSubtle1: var(--colorOtherColorsGreyscale100);
+  --colorSurfaceSubtle1: var(--colorOtherColorsGreyscale100);
   /* Background, black, white, grey, greytones, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceSubtle2: var(--colorOtherColorsGreyscale50);
+  --colorSurfaceSubtle2: var(--colorOtherColorsGreyscale50);
   /* Background, black, white, grey, greytones, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandBlue1: var(--colorBrandColorsBlue50);
+  --colorSurfaceBrandBlue1: var(--colorBrandColorsBlue50);
   /* Background, color, brand, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandBlue2: var(--colorBrandColorsBlue100);
+  --colorSurfaceBrandBlue2: var(--colorBrandColorsBlue100);
   /* Background, color, brand, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandBlue3: var(--colorBrandColorsBlue300);
+  --colorSurfaceBrandBlue3: var(--colorBrandColorsBlue300);
   /* Background, color, brand, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandBlue4: var(--colorBrandColorsBlue500);
+  --colorSurfaceBrandBlue4: var(--colorBrandColorsBlue500);
   /* Background, color, brand, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandBlue5: var(--colorBrandColorsBlue800);
+  --colorSurfaceBrandBlue5: var(--colorBrandColorsBlue800);
   /* Background, color, brand, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandBlue6: var(--colorBrandColorsBlue900);
+  --colorSurfaceBrandBlue6: var(--colorBrandColorsBlue900);
   /* Background, color, brand, button, label, chip, box, container, fill */
-  --colorSurfaceSurfaceBrandYellow: var(--colorBrandColorsYellow500);
+  --colorSurfaceBrandYellow: var(--colorBrandColorsYellow500);
   /* Border, outline, divider, black, white, grey, greytones */
-  --colorStrokeStrokeDefault: var(--colorOtherColorsGreyscaleBlack);
+  --colorStrokeDefault: var(--colorOtherColorsGreyscaleBlack);
   /* Border, outline, divider, black, white, grey, greytones */
-  --colorStrokeStrokeInverse: var(--colorOtherColorsGreyscaleWhite);
+  --colorStrokeInverse: var(--colorOtherColorsGreyscaleWhite);
   /* Border, outline, divider, black, white, grey, greytones */
-  --colorStrokeStrokeSubtle1: var(--colorOtherColorsGreyscale50);
+  --colorStrokeSubtle1: var(--colorOtherColorsGreyscale50);
   /* Border, outline, divider, black, white, grey, greytones */
-  --colorStrokeStrokeSubtle2: var(--colorOtherColorsGreyscale100);
+  --colorStrokeSubtle2: var(--colorOtherColorsGreyscale100);
   /* Border, outline, divider, black, white, grey, greytones */
-  --colorStrokeStrokeSubtle3: var(--colorOtherColorsGreyscale200);
+  --colorStrokeSubtle3: var(--colorOtherColorsGreyscale200);
   /* Border, outline, divider, black, white, grey, greytones */
-  --colorStrokeStrokeSubtle4: var(--colorOtherColorsGreyscale600);
+  --colorStrokeSubtle4: var(--colorOtherColorsGreyscale600);
   /* Border, outline, divider, brand, color, */
-  --colorStrokeStrokeBrandBlue1: var(--colorBrandColorsBlue500);
+  --colorStrokeBrandBlue2: var(--colorBrandColorsBlue500);
   /* Border, outline, divider, brand, color, */
-  --colorStrokeStrokeBrandBlue2: var(--colorBrandColorsBlue100);
+  --colorStrokeBrandBlue1: var(--colorBrandColorsBlue100);
   /* Border, outline, divider, brand, color, */
-  --colorStrokeStrokeBrandYellow1: var(--colorBrandColorsYellow500);
+  --colorStrokeBrandYellow2: var(--colorBrandColorsYellow500);
   /* Border, outline, divider, brand, color, */
-  --colorStrokeStrokeBrandYellow2: var(--colorBrandColorsYellow100);
+  --colorStrokeBrandYellow1: var(--colorBrandColorsYellow100);
   /* Element, ui, graphic, black, white, grey, greytones */
-  --colorIconIconDefault: var(--colorOtherColorsGreyscaleBlack);
+  --colorIconDefault: var(--colorOtherColorsGreyscaleBlack);
   /* Element, ui, graphic, black, white, grey, greytones */
-  --colorIconIconInverse: var(--colorOtherColorsGreyscaleWhite);
+  --colorIconInverse: var(--colorOtherColorsGreyscaleWhite);
   /* Element, ui, graphic, black, white, grey, greytones */
-  --colorIconIconSubtle: var(--colorOtherColorsGreyscale600);
+  --colorIconSubtle: var(--colorOtherColorsGreyscale600);
   /* Element, ui, graphic, brand, color */
-  --colorIconIconBrandBlue: var(--colorBrandColorsBlue500);
+  --colorIconBrandBlue: var(--colorBrandColorsBlue500);
   /* Element, ui, graphic, brand, color */
-  --colorIconIconBrandYellow: var(--colorBrandColorsYellow500);
+  --colorIconBrandYellow: var(--colorBrandColorsYellow500);
   /* Inactive */
-  --colorDisabledDisabledText: var(--colorTransparentColorsDark50);
+  --colorDisabledText: var(--colorTransparentColorsDark50);
   /* Inactive */
-  --colorDisabledDisabledSurface: var(--colorTransparentColorsDark10);
+  --colorDisabledSurface: var(--colorTransparentColorsDark10);
   /* Inactive */
-  --colorDisabledDisabledStroke: var(--colorTransparentColorsDark50);
+  --colorDisabledStroke: var(--colorTransparentColorsDark50);
   /* Inactive */
-  --colorDisabledDisabledIcon: var(--colorTransparentColorsDark50);
-  --colorSystemColorsSystemFocus900: var(--colorSystemColorsBlue900);
-  --colorSystemColorsSystemFocus500: var(--colorSystemColorsBlue500);
-  --colorSystemColorsSystemFocus400: var(--colorSystemColorsBlue400);
-  --colorSystemColorsSystemFocus200: var(--colorSystemColorsBlue200);
+  --colorDisabledIcon: var(--colorTransparentColorsDark50);
+  --colorSystemColorsFocus900: var(--colorSystemColorsBlue900);
+  --colorSystemColorsFocus500: var(--colorSystemColorsBlue500);
+  --colorSystemColorsFocus400: var(--colorSystemColorsBlue400);
+  --colorSystemColorsFocus200: var(--colorSystemColorsBlue200);
   /* Positive */
-  --colorSystemColorsSystemSuccess900: var(--colorSystemColorsGreen900);
+  --colorSystemColorsSuccess900: var(--colorSystemColorsGreen900);
   /* Positive */
-  --colorSystemColorsSystemSuccess500: var(--colorSystemColorsGreen500);
+  --colorSystemColorsSuccess500: var(--colorSystemColorsGreen500);
   /* Positive */
-  --colorSystemColorsSystemSuccess400: var(--colorSystemColorsGreen400);
+  --colorSystemColorsSuccess400: var(--colorSystemColorsGreen400);
   /* Positive */
-  --colorSystemColorsSystemSuccess200: var(--colorSystemColorsGreen200);
+  --colorSystemColorsSuccess200: var(--colorSystemColorsGreen200);
   /* Error */
-  --colorSystemColorsSystemDanger900: var(--colorSystemColorsRed900);
+  --colorSystemColorsDanger900: var(--colorSystemColorsRed900);
   /* Error */
-  --colorSystemColorsSystemDanger500: var(--colorSystemColorsRed500);
+  --colorSystemColorsDanger500: var(--colorSystemColorsRed500);
   /* Error */
-  --colorSystemColorsSystemDanger400: var(--colorSystemColorsRed400);
+  --colorSystemColorsDanger400: var(--colorSystemColorsRed400);
   /* Error */
-  --colorSystemColorsSystemDanger200: var(--colorSystemColorsRed200);
+  --colorSystemColorsDanger200: var(--colorSystemColorsRed200);
   /* Important */
-  --colorSystemColorsSystemWarning900: var(--colorSystemColorsYellow900);
+  --colorSystemColorsWarning900: var(--colorSystemColorsYellow900);
   /* Important */
-  --colorSystemColorsSystemWarning500: var(--colorSystemColorsYellow500);
+  --colorSystemColorsWarning500: var(--colorSystemColorsYellow500);
   /* Important */
-  --colorSystemColorsSystemWarning400: var(--colorSystemColorsYellow400);
+  --colorSystemColorsWarning400: var(--colorSystemColorsYellow400);
   /* Important */
-  --colorSystemColorsSystemWarning200: var(--colorSystemColorsYellow200);
+  --colorSystemColorsWarning200: var(--colorSystemColorsYellow200);
 }
