@@ -1,4 +1,37 @@
-import { extendTheme } from "@mui/joy/styles";
+import {
+  extendTheme,
+  // type PaletteRange
+} from "@mui/joy/styles";
+
+/*
+ * Adding to palette: https://mui.com/joy-ui/customization/theme-colors/#adding-color-tokens
+ * Removing from palette: https://mui.com/joy-ui/customization/theme-colors/#removing-the-default-tokens
+ */
+
+declare module "@mui/joy/styles" {
+  interface ColorPalettePropOverrides {
+    primary: true;
+    // secondary: true;
+    danger: true;
+    neutral: false;
+    success: false;
+    warning: false;
+  }
+  // interface Palette {
+  //   // this will make the node `secondary` configurable in `extendTheme` and add `secondary` to the theme's palette.
+  //   secondary: PaletteRange;
+  // }
+}
+
+declare module "@mui/joy/Button" {
+  interface ButtonPropsVariantOverrides {
+    solid: true;
+    outlined: true;
+    soft: false;
+    plain: false;
+  }
+}
+
 
 export const theme = extendTheme({
   cssVarPrefix: "demo", // using 'demo' as namespace for css vars
@@ -33,6 +66,19 @@ export const theme = extendTheme({
           outlinedColor: "var(--colorTextBrandBlue2)",
           outlinedDisabledColor: "var(--colorDisabledText)",
           outlinedDisabledBorder: "var(--colorDisabledStroke)",
+          // soft
+          softBg: undefined,
+          softColor: undefined,
+          softHoverBg: undefined,
+          softActiveBg: undefined,
+          softActiveColor: undefined,
+          softDisabledBg: undefined,
+          softDisabledColor: undefined,
+          // plain
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
         },
         danger: {
           // base colors
@@ -62,6 +108,19 @@ export const theme = extendTheme({
           outlinedColor: "var(--colorSystemColorsDanger500)",
           outlinedDisabledColor: "var(--colorDisabledText)",
           outlinedDisabledBorder: "var(--colorDisabledStroke)",
+          // soft
+          softBg: undefined,
+          softColor: undefined,
+          softHoverBg: undefined,
+          softActiveBg: undefined,
+          softActiveColor: undefined,
+          softDisabledBg: undefined,
+          softDisabledColor: undefined,
+          // plain
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
         },
       },
     },
