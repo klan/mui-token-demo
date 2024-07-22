@@ -38,6 +38,9 @@ export const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
+        background: {
+          body: "var(--colorSurfaceDefault)",
+        },
         primary: {
           // base colors
           50: undefined,
@@ -126,17 +129,92 @@ export const theme = extendTheme({
     },
     dark: {
       palette: {
+        background: {
+          body: "var(--colorSurfaceInverse)",
+        },
         primary: {
-          50: "",
-          100: "#fffcf0",
-          200: "#fdf7df",
-          300: "#fbe9ae",
-          400: "#f8db7a",
-          500: "#f5ce42",
-          600: "",
-          700: "#f2b800",
-          800: "#f3aa00",
-          900: "",
+          // base colors
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          // solid
+          solidBg: "var(--colorBrandColorsYellow500)",
+          solidHoverBg: "var(--colorBrandColorsYellow400)",
+          solidActiveBg: "var(--colorBrandColorsYellow500)",
+          solidColor: "var(--colorTextInverse)",
+          solidDisabledBg: "var(--colorDisabledSurface)",
+          solidDisabledColor: "var(--colorDisabledText)",
+          solidDisabledBorder: "var(--colorDisabledStroke)",
+          // outline
+          outlinedBg: "var(--colorSurfaceDefault)",
+          outlinedBorder: "var(--colorBrandColorsYellow400)",
+          outlinedHoverBg: "var(--colorBrandColorsYellow100)",
+          outlinedActiveBg: "var(--colorBrandColorsYellow400)",
+          outlinedColor: "var(--colorBrandColorsYellow400)",
+          outlinedDisabledColor: "var(--colorDisabledText)",
+          outlinedDisabledBorder: "var(--colorDisabledStroke)",
+          // soft
+          softBg: undefined,
+          softColor: undefined,
+          softHoverBg: undefined,
+          softActiveBg: undefined,
+          softActiveColor: undefined,
+          softDisabledBg: undefined,
+          softDisabledColor: undefined,
+          // plain
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+        },
+        danger: {
+          // base colors
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          // solid
+          solidBg: "var(--colorSystemColorsDanger500)",
+          solidHoverBg: "var(--colorSystemColorsDanger400)",
+          solidActiveBg: "var(--colorSystemColorsDanger900)",
+          solidColor: "var(--colorTextInverse)",
+          solidDisabledBg: "var(--colorDisabledSurface)",
+          solidDisabledColor: "var(--colorDisabledText)",
+          solidDisabledBorder: "var(--colorDisabledStroke)",
+          // outline
+          outlinedBg: "var(--colorSurfaceDefault)",
+          outlinedBorder: "var(--colorSystemColorsDanger500)",
+          outlinedHoverBg: "var(--colorSystemColorsDanger200)",
+          outlinedActiveBg: "var(--colorSystemColorsDanger400)",
+          outlinedColor: "var(--colorSystemColorsDanger500)",
+          outlinedDisabledColor: "var(--colorDisabledText)",
+          outlinedDisabledBorder: "var(--colorDisabledStroke)",
+          // soft
+          softBg: undefined,
+          softColor: undefined,
+          softHoverBg: undefined,
+          softActiveBg: undefined,
+          softActiveColor: undefined,
+          softDisabledBg: undefined,
+          softDisabledColor: undefined,
+          // plain
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
         },
       },
     },

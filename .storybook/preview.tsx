@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import type { Preview } from "@storybook/react";
 import { CssVarsProvider } from "@mui/joy/styles";
 import CssBaseline from "@mui/joy/CssBaseline";
@@ -7,16 +7,15 @@ import { theme } from "../src/themes";
 export const withJoyTheme = (Story, context) => {
   const { theme: themeKey } = context.globals;
 
+  useEffect(() => {
+    // forcing change to attribute on html tag
+    document.documentElement.setAttribute("data-joy-color-scheme", themeKey);
+  }, [themeKey]);
+
   return (
-    <CssVarsProvider
-      defaultMode={themeKey}
-      theme={theme}
-      colorSchemeSelector="#storybook_color-scheme"
-    >
+    <CssVarsProvider defaultMode="system" theme={theme}>
       <CssBaseline />
-      <div id="storybook_color-scheme">
-        <Story />
-      </div>
+      <Story />
     </CssVarsProvider>
   );
 };
@@ -38,11 +37,10 @@ const preview: Preview = {
       name: "Theme",
       title: "Theme",
       description: "Theme for your components",
-      defaultValue: "system",
+      defaultValue: "light",
       toolbar: {
         dynamicTitle: true,
         items: [
-          { value: "system", right: "🌓", title: "System color scheme" },
           { value: "light", right: "☀️", title: "Light mode" },
           { value: "dark", right: "🌙", title: "Dark mode" },
         ],
