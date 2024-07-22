@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CustomButton } from "../components/Button";
+import { CustomButton } from "@/components/Button";
 
 const meta: Meta<typeof CustomButton> = {
   title: "Button",
@@ -28,9 +28,7 @@ export const Variants: Story = {
   render: () => (
     <>
       <CustomButton label="Solid" variant="solid" />
-      <CustomButton label="Soft" variant="soft" />
       <CustomButton label="Outlined" variant="outlined" />
-      <CustomButton label="Plain" variant="plain" />
     </>
   ),
 };
@@ -39,9 +37,6 @@ export const Colors: Story = {
   render: () => (
     <>
       <CustomButton label="Primary" color="primary" />
-      <CustomButton label="Neutral" color="neutral" />
-      <CustomButton label="Success" color="success" />
-      <CustomButton label="Warning" color="warning" />
       <CustomButton label="Danger" color="danger" />
     </>
   ),
