@@ -6,6 +6,9 @@ import {
 /*
  * Adding to palette: https://mui.com/joy-ui/customization/theme-colors/#adding-color-tokens
  * Removing from palette: https://mui.com/joy-ui/customization/theme-colors/#removing-the-default-tokens
+ *
+ * Adding new tokens: https://mui.com/joy-ui/customization/theme-colors/#adding-color-tokens
+ * Removing default tokens: https://mui.com/joy-ui/customization/theme-colors/#removing-the-default-tokens
  */
 
 declare module "@mui/joy/styles" {
@@ -65,7 +68,7 @@ declare module "@mui/joy/Radio" {
 }
 
 export const theme = extendTheme({
-  cssVarPrefix: "demo", // using 'demo' as namespace for css vars
+  cssVarPrefix: "demo", // using 'demo' as namespace for css vars (default: "joy")
   colorSchemes: {
     light: {
       palette: {
@@ -262,13 +265,6 @@ export const theme = extendTheme({
       },
     },
   },
-  // variants: {
-  //   solidDisabled: {
-  //     primary: {
-  //       borderWidth: "1px", // a style property can be added like this, but styleOverrides are often preferred to modify styles
-  //     },
-  //   },
-  // },
   components: {
     JoyButton: {
       styleOverrides: {
@@ -291,6 +287,9 @@ export const theme = extendTheme({
                 "--variant-outlinedActiveBg": "var(--colorSurfaceBrandBlue2)",
                 "--variant-outlinedActiveBorder":
                   "var(--colorStrokeBrandBlue2)",
+              },
+              [theme.getColorSchemeSelector("dark")]: {
+                // override variables and css properties for dark mode
               },
             }),
           ...(ownerState.variant === "outlined" &&
