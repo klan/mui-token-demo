@@ -1,7 +1,4 @@
-import {
-  extendTheme,
-  // type PaletteRange
-} from "@mui/joy/styles";
+import { extendTheme } from "@mui/joy/styles";
 
 /*
  * Adding to palette: https://mui.com/joy-ui/customization/theme-colors/#adding-color-tokens
@@ -10,62 +7,6 @@ import {
  * Adding new tokens: https://mui.com/joy-ui/customization/theme-colors/#adding-color-tokens
  * Removing default tokens: https://mui.com/joy-ui/customization/theme-colors/#removing-the-default-tokens
  */
-
-declare module "@mui/joy/styles" {
-  // overriding global types from https://github.com/mui/material-ui/tree/master/packages/mui-joy/src/styles/types
-  interface ColorPalettePropOverrides {
-    primary: true;
-    // secondary: true;
-    danger: true;
-    neutral: false;
-    success: false;
-    warning: false;
-  }
-  // interface Palette {
-  //   // this will make the node `secondary` configurable in `extendTheme` and add `secondary` to the theme's palette.
-  //   secondary: PaletteRange;
-  // }
-  interface VariantPropOverrides {
-    solid: false;
-    outlined: true;
-    soft: false;
-    plain: false;
-  }
-}
-
-declare module "@mui/joy/Button" {
-  // overriding component types from https://github.com/mui/material-ui/blob/master/packages/mui-material/src/Button/Button.d.ts
-  interface ButtonPropsVariantOverrides {
-    solid: true;
-    outlined: true;
-    soft: false;
-    plain: false;
-  }
-}
-
-declare module "@mui/joy/Input" {
-  interface InputPropsSizeOverrides {
-    sm: false;
-    md: true;
-    lg: false;
-  }
-}
-
-declare module "@mui/joy/Checkbox" {
-  interface InputPropsSizeOverrides {
-    sm: false;
-    md: true;
-    lg: false;
-  }
-}
-
-declare module "@mui/joy/Radio" {
-  interface InputPropsSizeOverrides {
-    sm: false;
-    md: true;
-    lg: false;
-  }
-}
 
 export const theme = extendTheme({
   cssVarPrefix: "demo", // using 'demo' as namespace for css vars (default: "joy")
@@ -168,6 +109,118 @@ export const theme = extendTheme({
           plainActiveBg: undefined,
           plainDisabledColor: undefined,
         },
+        neutral: {
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+          outlinedColor: undefined,
+          outlinedBorder: undefined,
+          outlinedHoverBg: undefined,
+          outlinedActiveBg: undefined,
+          outlinedDisabledColor: undefined,
+          outlinedDisabledBorder: undefined,
+          softColor: undefined,
+          softBg: undefined,
+          softHoverBg: undefined,
+          softActiveColor: undefined,
+          softActiveBg: undefined,
+          softDisabledColor: undefined,
+          softDisabledBg: undefined,
+          solidColor: undefined,
+          solidBg: undefined,
+          solidHoverBg: undefined,
+          solidActiveBg: undefined,
+          solidDisabledColor: undefined,
+          solidDisabledBg: undefined,
+          plainHoverColor: undefined,
+        },
+        success: {
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+          outlinedColor: undefined,
+          outlinedBorder: undefined,
+          outlinedHoverBg: undefined,
+          outlinedActiveBg: undefined,
+          outlinedDisabledColor: undefined,
+          outlinedDisabledBorder: undefined,
+          softColor: undefined,
+          softBg: undefined,
+          softHoverBg: undefined,
+          softActiveColor: undefined,
+          softActiveBg: undefined,
+          softDisabledColor: undefined,
+          softDisabledBg: undefined,
+          solidColor: undefined,
+          solidBg: undefined,
+          solidHoverBg: undefined,
+          solidActiveBg: undefined,
+          solidDisabledColor: undefined,
+          solidDisabledBg: undefined,
+          mainChannel: undefined,
+          lightChannel: undefined,
+          darkChannel: undefined,
+        },
+        warning: {
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+          outlinedColor: undefined,
+          outlinedBorder: undefined,
+          outlinedHoverBg: undefined,
+          outlinedActiveBg: undefined,
+          outlinedDisabledColor: undefined,
+          outlinedDisabledBorder: undefined,
+          softColor: undefined,
+          softBg: undefined,
+          softHoverBg: undefined,
+          softActiveColor: undefined,
+          softActiveBg: undefined,
+          softDisabledColor: undefined,
+          softDisabledBg: undefined,
+          solidColor: undefined,
+          solidBg: undefined,
+          solidHoverBg: undefined,
+          solidActiveBg: undefined,
+          solidDisabledColor: undefined,
+          solidDisabledBg: undefined,
+          mainChannel: undefined,
+          lightChannel: undefined,
+          darkChannel: undefined,
+        },
       },
     },
     dark: {
@@ -261,6 +314,118 @@ export const theme = extendTheme({
           plainHoverBg: undefined,
           plainActiveBg: undefined,
           plainDisabledColor: undefined,
+        },
+        neutral: {
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+          outlinedColor: undefined,
+          outlinedBorder: undefined,
+          outlinedHoverBg: undefined,
+          outlinedActiveBg: undefined,
+          outlinedDisabledColor: undefined,
+          outlinedDisabledBorder: undefined,
+          softColor: undefined,
+          softBg: undefined,
+          softHoverBg: undefined,
+          softActiveColor: undefined,
+          softActiveBg: undefined,
+          softDisabledColor: undefined,
+          softDisabledBg: undefined,
+          solidColor: undefined,
+          solidBg: undefined,
+          solidHoverBg: undefined,
+          solidActiveBg: undefined,
+          solidDisabledColor: undefined,
+          solidDisabledBg: undefined,
+          plainHoverColor: undefined,
+        },
+        success: {
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+          outlinedColor: undefined,
+          outlinedBorder: undefined,
+          outlinedHoverBg: undefined,
+          outlinedActiveBg: undefined,
+          outlinedDisabledColor: undefined,
+          outlinedDisabledBorder: undefined,
+          softColor: undefined,
+          softBg: undefined,
+          softHoverBg: undefined,
+          softActiveColor: undefined,
+          softActiveBg: undefined,
+          softDisabledColor: undefined,
+          softDisabledBg: undefined,
+          solidColor: undefined,
+          solidBg: undefined,
+          solidHoverBg: undefined,
+          solidActiveBg: undefined,
+          solidDisabledColor: undefined,
+          solidDisabledBg: undefined,
+          mainChannel: undefined,
+          lightChannel: undefined,
+          darkChannel: undefined,
+        },
+        warning: {
+          50: undefined,
+          100: undefined,
+          200: undefined,
+          300: undefined,
+          400: undefined,
+          500: undefined,
+          600: undefined,
+          700: undefined,
+          800: undefined,
+          900: undefined,
+          plainColor: undefined,
+          plainHoverBg: undefined,
+          plainActiveBg: undefined,
+          plainDisabledColor: undefined,
+          outlinedColor: undefined,
+          outlinedBorder: undefined,
+          outlinedHoverBg: undefined,
+          outlinedActiveBg: undefined,
+          outlinedDisabledColor: undefined,
+          outlinedDisabledBorder: undefined,
+          softColor: undefined,
+          softBg: undefined,
+          softHoverBg: undefined,
+          softActiveColor: undefined,
+          softActiveBg: undefined,
+          softDisabledColor: undefined,
+          softDisabledBg: undefined,
+          solidColor: undefined,
+          solidBg: undefined,
+          solidHoverBg: undefined,
+          solidActiveBg: undefined,
+          solidDisabledColor: undefined,
+          solidDisabledBg: undefined,
+          mainChannel: undefined,
+          lightChannel: undefined,
+          darkChannel: undefined,
         },
       },
     },
