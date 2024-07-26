@@ -72,6 +72,9 @@ export const theme = extendTheme({
         background: {
           body: "var(--colorSurfaceDefault)",
         },
+        text: {
+          primary: "var(--colorTextSubtle2)",
+        },
         primary: {
           // base colors
           50: undefined,
@@ -168,6 +171,9 @@ export const theme = extendTheme({
       palette: {
         background: {
           body: "var(--colorSurfaceInverse)",
+        },
+        text: {
+          primary: "var(--colorTextInverse)",
         },
         primary: {
           // base colors
