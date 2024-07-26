@@ -94,10 +94,13 @@ export const theme = extendTheme({
           solidDisabledBorder: "var(--colorDisabledStroke)",
           // outline
           outlinedBg: "var(--colorSurfaceDefault)",
-          outlinedBorder: "var(--colorStrokeBrandBlue2)",
-          outlinedHoverBg: "var(--colorSurfaceBrandBlue1)",
-          outlinedActiveBg: "var(--colorSurfaceBrandBlue2)",
-          outlinedColor: "var(--colorTextBrandBlue2)",
+          outlinedBorder: "var(--colorStrokeSubtle3)",
+          outlinedColor: "var(--colorTextSubtle2)",
+          outlinedHoverBg: "var(--colorSurfaceSubtle2)",
+          outlinedHoverBorder: "var(--colorStrokeDefault)",
+          outlinedActiveBg: "var(--colorSurfaceDefault)",
+          outlinedActiveBorder: "var(--colorStrokeDefault)",
+          outlinedDisabledBg: "var(--colorDisabledSurface)",
           outlinedDisabledColor: "var(--colorDisabledText)",
           outlinedDisabledBorder: "var(--colorDisabledStroke)",
           // soft
@@ -137,9 +140,12 @@ export const theme = extendTheme({
           // outline
           outlinedBg: "var(--colorSurfaceDefault)",
           outlinedBorder: "var(--colorSystemColorsDanger500)",
-          outlinedHoverBg: "var(--colorSystemColorsDanger200)",
-          outlinedActiveBg: "var(--colorSystemColorsDanger400)",
-          outlinedColor: "var(--colorSystemColorsDanger500)",
+          outlinedColor: "var(--colorTextSubtle2)",
+          outlinedHoverBg: "var(--colorSurfaceDefault)",
+          outlinedHoverBorder: "var(--colorSystemColorsDanger500)",
+          outlinedActiveBg: "var(--colorSurfaceDefault)",
+          outlinedActiveBorder: "var(--colorSystemColorsDanger500)",
+          outlinedDisabledBg: "var(--colorDisabledSurface)",
           outlinedDisabledColor: "var(--colorDisabledText)",
           outlinedDisabledBorder: "var(--colorDisabledStroke)",
           // soft
@@ -266,6 +272,33 @@ export const theme = extendTheme({
               border: "1px solid", // styles can be modified like this on specific variants, etc.
               // fontSize: theme.vars.fontSize.lg, // css vars are available in theme.vars.*, like eg. 'var(--joy-fontSize-lg)'
             }),
+          ...(ownerState.variant === "outlined" &&
+            ownerState.color === "primary" && {
+              "--variant-outlinedBorder": "var(--colorStrokeBrandBlue2)",
+              "--variant-outlinedColor": "var(--colorTextBrandBlue2)",
+              "--variant-outlinedDisabledBg": "var(--colorSurfaceDefault)",
+              "&:hover": {
+                "--variant-outlinedHoverBg": "var(--colorSurfaceBrandBlue1)",
+                "--variant-outlinedHoverBorder": "var(--colorStrokeBrandBlue2)",
+              },
+              "&:active": {
+                "--variant-outlinedActiveBg": "var(--colorSurfaceBrandBlue2)",
+                "--variant-outlinedActiveBorder":
+                  "var(--colorStrokeBrandBlue2)",
+              },
+            }),
+          ...(ownerState.variant === "outlined" &&
+            ownerState.color === "danger" && {
+              "--variant-outlinedColor": "var(--colorSystemColorsDanger500)",
+              "&:hover": {
+                "--variant-outlinedHoverBg":
+                  "var(--colorSystemColorsDanger200)",
+              },
+              "&:active": {
+                "--variant-outlinedActiveBg":
+                  "var(--colorSystemColorsDanger400)",
+              },
+            }),
         }),
       },
     },
@@ -275,6 +308,19 @@ export const theme = extendTheme({
         color: "primary",
         size: "md",
       },
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.variant === "outlined" &&
+            ownerState.color === "primary" && {
+              "&:hover": {
+                "--variant-outlinedHoverBg": "var(--colorSurfaceDefault)",
+              },
+              "& input::placeholder": {
+                color: "var(--colorTextSubtle1)",
+              },
+            }),
+        }),
+      },
     },
     JoyCheckbox: {
       defaultProps: {
@@ -282,12 +328,32 @@ export const theme = extendTheme({
         color: "primary",
         size: "md",
       },
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.color === "primary" && {
+            "--variant-outlinedColor": "var(--colorcolorIconDefaultIcon)",
+          }),
+          ...(ownerState.color === "danger" && {
+            "--variant-outlinedColor": "var(--colorSystemColorsDanger500)",
+          }),
+        }),
+      },
     },
     JoyRadio: {
       defaultProps: {
         variant: "outlined",
         color: "primary",
         size: "md",
+      },
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.color === "primary" && {
+            "--variant-outlinedColor": "var(--colorcolorIconDefaultIcon)",
+          }),
+          ...(ownerState.color === "danger" && {
+            "--variant-outlinedColor": "var(--colorSystemColorsDanger500)",
+          }),
+        }),
       },
     },
   },
