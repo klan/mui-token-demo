@@ -1,5 +1,5 @@
 import React from "react";
-import Button, { type ButtonProps } from "@mui/joy/Button";
+import JoyButton, { type ButtonProps } from "@mui/joy/Button";
 
 type ButtonBaseProps = Pick<
   ButtonProps,
@@ -10,6 +10,6 @@ export interface CustomButtonProps extends ButtonBaseProps {
   label: string;
 }
 
-export const CustomButton = ({ label, ...rest }: CustomButtonProps) => (
-  <Button {...rest}>{label}</Button>
+export const Button = ({ label, ...rest }: CustomButtonProps) => (
+  <JoyButton {...rest}>{label}</JoyButton>
 );

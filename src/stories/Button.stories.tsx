@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CustomButton } from "@/components/Button";
+import { Button } from "@/components/Button";
 
-const meta: Meta<typeof CustomButton> = {
+const meta: Meta<typeof Button> = {
   title: "Button",
-  component: CustomButton,
+  component: Button,
   parameters: {
     docs: {
       description: {
@@ -16,7 +16,7 @@ const meta: Meta<typeof CustomButton> = {
 
 export default meta;
 
-type Story = StoryObj<typeof CustomButton>;
+type Story = StoryObj<typeof Button>;
 
 export const Demo: Story = {
   args: {
@@ -27,8 +27,8 @@ export const Demo: Story = {
 export const Variants: Story = {
   render: () => (
     <>
-      <CustomButton label="Solid" variant="solid" />
-      <CustomButton label="Outlined" variant="outlined" />
+      <Button label="Solid" variant="solid" />
+      <Button label="Outlined" variant="outlined" />
     </>
   ),
 };
@@ -36,8 +36,8 @@ export const Variants: Story = {
 export const Colors: Story = {
   render: () => (
     <>
-      <CustomButton label="Primary" color="primary" />
-      <CustomButton label="Danger" color="danger" />
+      <Button label="Primary" color="primary" />
+      <Button label="Danger" color="danger" />
     </>
   ),
 };
@@ -45,9 +45,9 @@ export const Colors: Story = {
 export const Sizes: Story = {
   render: () => (
     <>
-      <CustomButton label="Small" size="sm" />
-      <CustomButton label="Medium" size="md" />
-      <CustomButton label="Large" size="lg" />
+      <Button label="Small" size="sm" />
+      <Button label="Medium" size="md" />
+      <Button label="Large" size="lg" />
     </>
   ),
 };
