@@ -19,16 +19,14 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Demo: Story = {
-  args: {
-    label: "Hello",
-  },
+  args: {},
 };
 
 export const Variants: Story = {
   render: () => (
     <>
-      <Button label="Solid" variant="solid" />
-      <Button label="Outlined" variant="outlined" />
+      <Button variant="solid">Solid</Button>
+      <Button variant="outlined">Outlined</Button>
     </>
   ),
 };
@@ -36,8 +34,8 @@ export const Variants: Story = {
 export const Colors: Story = {
   render: () => (
     <>
-      <Button label="Primary" color="primary" />
-      <Button label="Danger" color="danger" />
+      <Button color="primary">Primary</Button>
+      <Button color="danger">Danger</Button>
     </>
   ),
 };
@@ -45,9 +43,9 @@ export const Colors: Story = {
 export const Sizes: Story = {
   render: () => (
     <>
-      <Button label="Small" size="sm" />
-      <Button label="Medium" size="md" />
-      <Button label="Large" size="lg" />
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
     </>
   ),
 };
